@@ -1,0 +1,28 @@
+/* 所有标签的内外边距清零 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 斜体字体清除斜体效果(为什么呢) */
+em,i{
+    font-style: normal;
+}
+/* 清楚li小圆点 */
+li{
+    list-style: none;
+}
+img{
+    /* 防止低版本图片带有外部链接会有边框 */
+    border: 0;
+    /* 防止底部有空白缝隙 */
+    vertical-align: middle;
+}
+/* 鼠标经过button改为小手 */
+button{
+    cursor: pointer;
+}
+/* 取消未点链接的蓝色和已点链接的灰色 */
+a{
+    text-decoration: none;
+}
+
