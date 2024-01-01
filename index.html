@@ -7,22 +7,27 @@
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./sccreset.css">
     <style>
-        body{
-            position: relative;
+        html{
+            font-size: 62.5%;
+        }
+        .app{
+            width: 100vw;
+            height: 100vh;
+            /* 子元素设置margin,父元素会溢出,设置overflow解决. */
+            overflow: hidden;
 
-            background-color: mediumpurple;
-            background-position: center center;
-            background-attachment: fixed;
+            /* background-color: mediumpurple; */
+            /* background-attachment: fixed; */
+            /* background-position: center center; */
             background: url('./bg_img.png') no-repeat;
             background-size: cover;
         }
-        .content-box{
-            position: absolute;
-            left: 35%;
-            width: 30%;
-            margin: 232px auto;
 
-            height: 348px;
+
+        .content-box{
+            width: 56rem;
+            height: 52rem;
+            margin: 21rem auto;
 
             background-color: rgba(0, 0, 0, 0.3);
         }
@@ -41,14 +46,16 @@
     </style>
 </head>
 <body>
-    <div class="content-box">
-        <h3>🚀帅小伙的发布页🚀</h3>
-        <span>
-            <a href="https://7800o7537s.imdo.co">https://7800o7537s.imdo.co</a>
-        </span>
-        <span>
-            <a href="https://1e3f0db1.r10.cpolar.top ">https://1e3f0db1.r10.cpolar.top </a>
-        </span>
+    <div class="app">
+        <div class="content-box">
+            <h3>🚀帅小伙的发布页🚀</h3>
+            <span>
+                <a href="https://7800o7537s.imdo.co">https://7800o7537s.imdo.co</a>
+            </span>
+            <span>
+                <a href="https://1e3f0db1.r10.cpolar.top ">https://1e3f0db1.r10.cpolar.top </a>
+            </span>
+        </div>
     </div>
 </body>
 </html>
