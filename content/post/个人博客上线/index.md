@@ -7,4 +7,80 @@ tags=['博客']
 
 +++
 
-`hugo` 作为静态网页生成方案实现的呢.
+[toc]
+
+> 实现了(几乎)自动化的博客网站.
+>
+> - 本地写博客内容推送到github
+> - 利用github Action使用hugo自动构建静态网页.
+
+## 静态网页构建方案
+
+**Hugo**
+
+官网: [The world's fastest framework for building websites](https://gohugo.io/)
+
+1. hugo new site [hugo项目名]
+2. 下载主题到themes目录
+3. 图省事就直接把themes中`exampleSite`之类的东西中`content, hugo.yaml`之类的东西直接复制到项目根目录对应位置再稍微改改.
+4. `hugo server --buildDrafts` 本地预览.
+
+## 监听推送, 构建内容.
+
+**使用github Action.**
+
+1. 推荐由Action自动创建另外的分支而非手动, 避免不必要的版本冲突.
+
+2. 在项目根路径下创建`.github\workflows\deploy.yml`, 包含在git内容里.
+
+   ```yaml
+   name: Deploy Hugo Site to GitHub Pages
+   
+   # 触发条件：推送到 main 分支时执行
+   on:
+     push:
+       branches: [ main ]
+   
+   # ⭐ 赋予工作流写入权限.
+   permissions:
+     contents: write
+   
+   jobs:
+     deploy:
+       runs-on: ubuntu-latest
+   
+       steps:
+         # 步骤 1：拉取仓库代码
+         - name: Checkout code
+           uses: actions/checkout@v4
+           with:
+             # submodules: true  # 若主题通过 Git Submodule 管理，必须设为 true
+             fetch-depth: 0    # 拉取完整历史，避免 Hugo 构建时出错
+   
+         # 步骤 2：安装 Hugo（根据你的 Hugo 版本选择，这里以 0.124.1 为例）
+         - name: Install Hugo
+           uses: peaceiris/actions-hugo@v2
+           with:
+             hugo-version: '0.152.2'  # 替换为你的 Hugo 版本（可在本地用 hugo version 查看）
+             extended: true  # 若使用了 SCSS/Sass 等扩展功能，需设为 true
+   
+         # 步骤 3：构建静态文件（生成 public 目录）
+         - name: Build Hugo site
+           run: hugo --buildDrafts  # 若需要构建草稿，可改为 hugo --buildDrafts
+   
+         # 步骤 4：部署到 GitHub Pages
+         - name: Deploy to GitHub Pages
+           uses: peaceiris/actions-gh-pages@v4
+           with:
+             # 部署权限：使用 GitHub 提供的默认密钥（无需手动生成）
+             github_token: ${{ secrets.GITHUB_TOKEN }}
+             # 部署源：Hugo 构建后的 public 目录
+             publish_dir: ./public
+             # 部署目标分支：GitHub Pages 读取的分支（默认 gh-pages，可修改）
+             publish_branch: gh-pages
+             # ⭐ 每次部署都会创建一个全新的、无历史记录的 gh-pages 分支
+             force_orphan: true
+   ```
+
+3. 之后每次向远程仓库的main分支提交时会触发工作流, 大概十多秒到半分钟会将构建好的内容自动置于gh-pages分支. (如有报错, 点进Actions查看原因.)
+4. 在该仓库中: `settings-pages-build and deployment`选择展示页面由分支`gh-pages`呈现, 保存.
