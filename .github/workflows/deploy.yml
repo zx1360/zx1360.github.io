@@ -5,6 +5,9 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest  # 使用 Ubuntu 系统运行
@@ -38,3 +41,4 @@ jobs:
           publish_dir: ./public
           # 部署目标分支：GitHub Pages 读取的分支（默认 gh-pages，可修改）
           publish_branch: gh-pages
+          force_orphan: true
