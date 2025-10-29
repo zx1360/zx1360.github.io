@@ -28,6 +28,21 @@ jobs:
       - name: Build Hugo site
         run: hugo --buildDrafts  # 若需要构建草稿，可改为 hugo --buildDrafts
 
+      # 新增步骤：拉取远程 gh-pages 分支到本地（关键步骤）
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages  # 切换到 gh-pages 分支
+          path: gh-pages  # 将分支内容拉取到本地 gh-pages 目录
+
+      # 新增步骤：用构建好的 public 目录覆盖 gh-pages 分支内容
+      - name: Sync public files to gh-pages branch
+        run: |
+          # 删除 gh-pages 目录中原有内容（保留 .git 目录，避免破坏分支）
+          rm -rf ./gh-pages/*
+          # 将 public 目录的新内容复制到 gh-pages 目录
+          cp -r ./public/* ./gh-pages/
+
       # 步骤 4：部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -38,4 +53,3 @@ jobs:
           publish_dir: ./public
           # 部署目标分支：GitHub Pages 读取的分支（默认 gh-pages，可修改）
           publish_branch: gh-pages
-          force_orphan: true
