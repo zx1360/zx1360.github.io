@@ -1,6 +1,6 @@
 +++
 date = '2025-10-29T13:17:00+08:00'
-draft = true
+draft = false
 title = '个人博客上线'
 
 tags=['博客']

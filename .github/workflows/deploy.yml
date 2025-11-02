@@ -29,7 +29,7 @@ jobs:
 
       # 步骤 3：构建静态文件（生成 public 目录）
       - name: Build Hugo site
-        run: hugo --buildDrafts  # 若需要构建草稿，可改为 hugo --buildDrafts
+        run: hugo  # 若需要构建草稿，可改为 hugo --buildDrafts
 
       # 步骤 4：部署到 GitHub Pages
       - name: Deploy to GitHub Pages
