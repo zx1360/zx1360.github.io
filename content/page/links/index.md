@@ -14,4 +14,6 @@ menu:
 comments: false
 ---
 
+![OIP-C](assets/OIP-C.webp)
+
 这么强?
