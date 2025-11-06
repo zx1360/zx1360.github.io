@@ -143,10 +143,10 @@ import (
 )
 
 const (
-	serverIP   = "115.190.232.188" // 替换为实际云服务器IP
+	serverIP   = "替换为实际云服务器IP" // 替换为实际云服务器IP
 	serverPort = 8000              // 云服务器TCP端口（与服务端对应）
 	localPort  = 7274              // 本地端口（同时用于HTTP服务和长连接）
-	interval   = 10
+	interval   = 20
 )
 
 func main() {

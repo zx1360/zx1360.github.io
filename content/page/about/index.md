@@ -7,4 +7,6 @@ menu:
             icon: user
 ---
 
+![img](assets/OIP-C.webp)
+
 谁才是, 超级小马.
