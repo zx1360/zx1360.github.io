@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on 谁才是超级小马</title>
+        <link>https://zx1360.github.io/tags/</link>
+        <description>Recent content in Tags on 谁才是超级小马</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-CN</language>
+        <copyright>zx1360</copyright>
+        <lastBuildDate>Wed, 05 Nov 2025 16:48:41 +0800</lastBuildDate><atom:link href="https://zx1360.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Go</title>
+        <link>https://zx1360.github.io/tags/go/</link>
+        <pubDate>Wed, 05 Nov 2025 16:48:41 +0800</pubDate>
+        
+        <guid>https://zx1360.github.io/tags/go/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>内网穿透</title>
+        <link>https://zx1360.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+        <pubDate>Wed, 05 Nov 2025 16:48:41 +0800</pubDate>
+        
+        <guid>https://zx1360.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>云服务器</title>
+        <link>https://zx1360.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Wed, 05 Nov 2025 16:48:41 +0800</pubDate>
+        
+        <guid>https://zx1360.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Nat</title>
+        <link>https://zx1360.github.io/tags/nat/</link>
+        <pubDate>Sun, 02 Nov 2025 16:37:54 +0800</pubDate>
+        
+        <guid>https://zx1360.github.io/tags/nat/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>P2p</title>
+        <link>https://zx1360.github.io/tags/p2p/</link>
+        <pubDate>Sun, 02 Nov 2025 16:37:54 +0800</pubDate>
+        
+        <guid>https://zx1360.github.io/tags/p2p/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>博客</title>
+        <link>https://zx1360.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+        <pubDate>Wed, 29 Oct 2025 13:17:00 +0800</pubDate>
+        
+        <guid>https://zx1360.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
