@@ -1,0 +1,6 @@
+{{- $file := .Get "file" -}}
+{{- with readFile $file -}}
+  {{ . | markdownify }}
+{{- else -}}
+  {{- errorf "无法在 %q 中读取文件 %q" $.Page.Path $file -}}
+{{- end -}}
