@@ -1,6 +1,6 @@
 +++
 date = '2026-02-15T21:51:25+08:00'
-draft = true
+draft = false
 title = '个性软件torrid总结'
 
 
