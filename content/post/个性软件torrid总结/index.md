@@ -13,15 +13,21 @@ tags=['Flutter', '客户端', 'agentic coding', 'Go', '服务端', 'CLI命令行
 
 # 项目文档展示
 
-## TORRID
+## TORRID文档
+
+仓库地址: [zx1360/Torrid: 仅安卓端的自用多功能软件. 打卡, 随笔, 看漫画, 与monarch项目联动查看pc库存和媒体文件等功能.](https://github.com/zx1360/Torrid)
 
 > {{< include file="content/post/个性软件torrid总结/torrid.md" >}}
 
-## MONARCH
+## MONARCH文档
+
+仓库地址: [zx1360/monarch: Go编写的http服务器, 用以支持我另一个项目'torrid'的网络请求.](https://github.com/zx1360/monarch)
 
 > {{< include file="content/post/个性软件torrid总结/monarch.md" >}}
 
-## MONARCH_GIZMOS
+## MONARCH_GIZMOS文档
+
+仓库地址: [zx1360/monarch_gizmos: 另一个项目'monarch'的辅助CLI命令行程序, 处理原始数据并写入本地数据库以供http服务器使用.](https://github.com/zx1360/monarch_gizmos)
 
 > {{< include file="content/post/个性软件torrid总结/monarch_gizmos.md" >}}
 
@@ -60,6 +66,47 @@ tags=['Flutter', '客户端', 'agentic coding', 'Go', '服务端', 'CLI命令行
   2. 同样对随笔页面的加入心情记录, (仅写入随笔可用, 追加留言不必).
   返回的修改结果应无错并且可以按预期运行, 修改直到代码正确!
   ```
+
+## 举个栗子
+
+### 开发需求
+
+开发torrid的`gallery藏品页`模块, 它是一个用以回顾我保存于电脑的所有视频/图片文件并打标签和标记删除的工具, 分为三部分:
+
+- **torrid客户端**, 提供内容呈现和交互.
+- **monarch服务端**, 实际的文件存储, 处理http请求.
+- **monarch_gizmos**, 辅助CLI程序, 处理原始文件写入数据库以及实际对标记删除的文件进行软删除.
+
+### 以md文件记录需求
+
+#### 项目基准文档.md
+
+> {{< include file="content/post/个性软件torrid总结/gallery_md/项目基准文档.md" >}}
+
+#### 数据库文档.md
+
+> {{< include file="content/post/个性软件torrid总结/gallery_md/数据库文档.md" >}}
+
+#### torrid文档.md
+
+> {{< include file="content/post/个性软件torrid总结/gallery_md/torrid文档.md" >}}
+
+#### monarch文档.md
+
+> {{< include file="content/post/个性软件torrid总结/gallery_md/monarch文档.md" >}}
+
+#### gallery文档.md (monarch_gizmos)
+
+> {{< include file="content/post/个性软件torrid总结/gallery_md/gallery文档.md" >}}
+
+### agent对话
+
+```
+我正在开发这个总项目的torrid相关部分, 请你查看我的五个项目文档和gallery目录下相关文件厘清我的项目逻辑. 重点关注标记"PS:" 和"TODO:" 的注释和重要的注释部分理会我的开发意图.
+以推荐的项目组织结构和实现方式完成我的需求. 对我的开发要求有不明白的地方首先提问而不是立马着手做.
+```
+
+**然后ai列举了几点不明确的地方, 然后分别详细说明即可.**
 
 ## 另外想说
 
