@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="项目文档展示 TORRID文档 仓库地址: zx1360/Torrid: 仅安卓端的自用多功能软件. 打卡, 随笔, 看漫画, 与monarch项目联动查看pc库存和媒体文件等功能.\n应用信息 关于TORRID 一、开源 [zx1360/Torrid] [https://github.com/zx1360/Torrid\n二、数据安全 隐私 所有用户数据存于本地而不会被外部获取\n">
+<title>个性软件torrid总结</title>
+
+<link rel='canonical' href='https://zx1360.github.io/p/%E4%B8%AA%E6%80%A7%E8%BD%AF%E4%BB%B6torrid%E6%80%BB%E7%BB%93/'>
+
+<link rel="stylesheet" href="/scss/style.min.6a692fd055deae459f2a9767f57f3855ba80cafd5041317f24f7360f6ca47cdf.css"><meta property='og:title' content="个性软件torrid总结">
+<meta property='og:description' content="项目文档展示 TORRID文档 仓库地址: zx1360/Torrid: 仅安卓端的自用多功能软件. 打卡, 随笔, 看漫画, 与monarch项目联动查看pc库存和媒体文件等功能.\n应用信息 关于TORRID 一、开源 [zx1360/Torrid] [https://github.com/zx1360/Torrid\n二、数据安全 隐私 所有用户数据存于本地而不会被外部获取\n">
+<meta property='og:url' content='https://zx1360.github.io/p/%E4%B8%AA%E6%80%A7%E8%BD%AF%E4%BB%B6torrid%E6%80%BB%E7%BB%93/'>
+<meta property='og:site_name' content='谁才是超级小马'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Flutter' /><meta property='article:tag' content='客户端' /><meta property='article:tag' content='agentic coding' /><meta property='article:tag' content='Go' /><meta property='article:tag' content='服务端' /><meta property='article:tag' content='CLI命令行程序' /><meta property='article:published_time' content='2026-02-15T21:51:25&#43;08:00'/><meta property='article:modified_time' content='2026-02-15T21:51:25&#43;08:00'/>
+<meta name="twitter:title" content="个性软件torrid总结">
+<meta name="twitter:description" content="项目文档展示 TORRID文档 仓库地址: zx1360/Torrid: 仅安卓端的自用多功能软件. 打卡, 随笔, 看漫画, 与monarch项目联动查看pc库存和媒体文件等功能.\n应用信息 关于TORRID 一、开源 [zx1360/Torrid] [https://github.com/zx1360/Torrid\n二、数据安全 隐私 所有用户数据存于本地而不会被外部获取\n">
+    <link rel="shortcut icon" href="/six.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_123e0d928c0ea3e9.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">谁才是超级小马</a></h1>
+            <h2 class="site-description">什么都想学一点.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/471161113'
+                        target="_blank"
+                        title="BiliBili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/zx1360'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#项目文档展示">项目文档展示</a>
+      <ol>
+        <li><a href="#torrid文档">TORRID文档</a></li>
+        <li><a href="#monarch文档">MONARCH文档</a></li>
+        <li><a href="#monarch_gizmos文档">MONARCH_GIZMOS文档</a></li>
+      </ol>
+    </li>
+    <li><a href="#重要ai-prompt展示">重要AI prompt展示</a>
+      <ol>
+        <li><a href="#展示理由以及说明">展示理由以及说明</a></li>
+        <li><a href="#提示词经验之谈-不保真-0v0">提示词经验之谈 (不保真 0v0)</a></li>
+        <li><a href="#举个栗子">举个栗子</a>
+          <ol>
+            <li><a href="#开发需求">开发需求</a></li>
+            <li><a href="#以md文件记录需求">以md文件记录需求</a>
+              <ol>
+                <li><a href="#项目基准文档md">项目基准文档.md</a></li>
+                <li><a href="#数据库文档md">数据库文档.md</a></li>
+                <li><a href="#torrid文档md">torrid文档.md</a></li>
+                <li><a href="#monarch文档md">monarch文档.md</a></li>
+                <li><a href="#gallery文档md-monarch_gizmos">gallery文档.md (monarch_gizmos)</a></li>
+              </ol>
+            </li>
+            <li><a href="#agent对话">agent对话</a></li>
+          </ol>
+        </li>
+        <li><a href="#另外想说">另外想说</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%BC%96%E7%A8%8B/" >
+                编程
+            </a>
+        
+            <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/" >
+                软件开发
+            </a>
+        
+            <a href="/categories/%E5%85%A8%E6%A0%88/" >
+                全栈
+            </a>
+        
+            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" >
+                数据库
+            </a>
+        
+            <a href="/categories/ai/" >
+                AI
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%B8%AA%E6%80%A7%E8%BD%AF%E4%BB%B6torrid%E6%80%BB%E7%BB%93/">个性软件torrid总结</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2026-02-15</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 22 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="项目文档展示">项目文档展示
+</h1><h2 id="torrid文档">TORRID文档
+</h2><p>仓库地址: <a class="link" href="https://github.com/zx1360/Torrid"  target="_blank" rel="noopener"
+    >zx1360/Torrid: 仅安卓端的自用多功能软件. 打卡, 随笔, 看漫画, 与monarch项目联动查看pc库存和媒体文件等功能.</a></p>
+<blockquote>
+<h1 id="应用信息">应用信息
+</h1><h2 id="关于torrid">关于TORRID
+</h2><h3 id="一开源"><strong>一、开源</strong>
+</h3><p><code>[zx1360/Torrid]</code> [https://github.com/zx1360/Torrid</p>
+<h3 id="二数据安全">二、数据安全
+</h3><h4 id="隐私">隐私
+</h4><p><strong>所有用户数据存于本地而不会被外部获取</strong></p>
+<h4 id="备份">备份
+</h4><p>可通过与我另外一个库中开源软件<code>monarch</code>联动, 实现备份到pc上.</p>
+<p>格式为json, 适合阅读/修改.</p>
+<h3 id="三应用干净">三、应用干净
+</h3><p>卸载应用即删除所有数据不留痕. 不保留任何配置信息和数据.</p>
+<p><strong>==因此, 未备份的数据会在应用卸载后真正消失.==</strong></p>
+<ul>
+<li>打卡/随笔等数据保存于内部应用私有目录</li>
+<li>相应的图片等文件保存于外部应用私有目录</li>
+</ul>
+<p>PS: 除了某些页面手动点击&quot;保存&quot;按钮后, 保存在外部公共空间. (为了保存的图片能够被手机自带的相册识别到).</p>
+<h3 id="四后台友好">四、后台友好
+</h3><p><strong>CPU友好:</strong> 只有用户操作才会进行响应的操作.</p>
+<p>处于后台时不会运行其他行为. (指仍旧活跃的后台代码)</p>
+<p>**内存友好: **</p>
+<p>不知道, 感觉应该不占内存.</p>
+<h2 id="注意事项">注意事项
+</h2><p>真正把想法做出成品来才感受得到, 要做到&quot;人性化&quot;真的是费时又费力. 但这一点又恰是最影响使用体验的. 请避免以下行为防止应用出错.</p>
+<p>(我没测试过会发生什么情况).</p>
+<ul>
+<li>不要随意删改应用下的所有文件名/目录名. (不过手机一般操作不到应用目录).</li>
+<li>不要进行奇怪的操作查看有无奇怪的反应.</li>
+<li>&hellip;</li>
+</ul>
+<h2 id="另外说明">另外说明
+</h2><p>本应用是出于自用+练手目的制作的, 目标场景以我的需求出发. 比如我喜欢做任务一样地每天做点事然后回顾的时候有成就感, 于是有了<strong>积微页</strong>来打卡. 喜欢每天记点东西就有了<strong>随笔页</strong>写东西.</p>
+<p>25年八月中旬了解到flutter开始到目前26年二月中旬, 一旦入门感觉写起来还挺有意思的, 甚至当初开发<strong>随笔页</strong>时十多天小半个月还没弄出来虽然挫败但是最终做出也挺有乐趣的. 另外也略微了解到了应用开发相关知识感觉受益匪浅. 不过到目前<strong>库存页</strong>开发完毕之后应该就搁置仅作维护以及偶尔优化了. 原因有二:</p>
+<ul>
+<li>一是确实我所期望的**==满足我个性需求的好用的小工具应用==**差不多完善了.</li>
+<li>二是最近一个月来用教育福利获得的github copilot额度开发, 效果极好, 甚至已经到了额度用完就没啥自己手写的想法的程度了. <strong><del>不得不说, claude opus真王朝了吧</del></strong></li>
+</ul>
+<p>部分功能**(如库存页, 漫画页, 藏品页以及本地数据的备份和同步)<strong>需要搭配我的另一个项目</strong>monarch**使用, 他是一个运行在电脑上的Go程序, 用以处理本应用的http请求.</p>
+<h1 id="页面介绍">页面介绍
+</h1><h2 id="主页">主页
+</h2><p><strong>可自定义主页背景, 默认简约渐变背景</strong></p>
+<center>
+    <img src="./md_assets/Screenshot_2026-02-14-22-25-25-508_com.example.to.jpg" width="45%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-38-04-342_com.example.to.jpg" width="45%" />
+</center>
+<h2 id="积微页">积微页
+</h2><p><strong>设置若干任务然后坚持每天完成!</strong></p>
+<center>
+    <img src="./md_assets/Screenshot_2026-02-14-22-26-15-670_com.example.to.jpg" width="30%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-26-23-549_com.example.to.jpg" width="30%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-27-11-805_com.example.to.jpg" width="30%" />
+</center>
+<h2 id="随笔页">随笔页
+</h2><p><strong>写日记、记录回忆、一天的经历等, 并打上标签, 可追加留言.</strong></p>
+<center>
+    <img src="./md_assets/IMG_20260214_224247.jpg" width="45%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-27-55-306_com.example.to.jpg" width="45%" />
+</center>
+<center>
+    <img src="./md_assets/Screenshot_2026-02-14-22-27-38-976_com.example.to.jpg" width="45%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-27-46-176_com.example.to.jpg" width="45%" />
+</center>
+<h2 id="库存页">库存页
+</h2><p><strong>待完成,  (借助自建服务器)</strong></p>
+<h2 id="阅读页">阅读页
+</h2><p><strong>借助公共在线api, 提供即时信息如每日精炼新闻, epic免费游戏, 各app的热搜.</strong></p>
+<center>
+    <img src="./md_assets/Screenshot_2026-02-14-22-28-08-045_com.example.to.jpg" width="30%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-28-28-149_com.example.to.jpg" width="30%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-28-44-547_com.example.to.jpg" width="30%" />
+</center>
+<h2 id="其他页">其他页
+</h2><h3 id="漫画页">漫画页
+</h3><p><strong>本地或在线阅读漫画 (借助自建服务器)</strong></p>
+<center>
+    <img src="./md_assets/Screenshot_2026-02-14-22-31-01-172_com.example.to.jpg" width="45%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-31-59-470_com.example.to.jpg" width="45%" />
+</center>
+<h3 id="藏品页">藏品页
+</h3><p><strong>回顾以往自己的媒体文件, 标记删除以及打标签等  (借助自建服务器)</strong></p>
+<center>
+    <img src="./md_assets/Screenshot_2026-02-14-11-04-23-698_com.example.to.jpg" width="45%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-33-52-971_com.example.to.jpg" width="45%" />
+</center>
+<h2 id="用户页">用户页
+</h2><h3 id="偏好设置">偏好设置
+</h3><p><strong>设置主页和侧边菜单的背景, 以及设置侧边菜单的顶部格言部分.</strong></p>
+<center>
+    <img src="./md_assets/Screenshot_2026-02-14-22-37-34-601_com.example.to.jpg" width="45%" />
+  	<img src="./md_assets/Screenshot_2026-02-14-22-37-44-647_com.example.to.jpg" width="45%" />
+</center>
+<h3 id="数据备份--借助自建服务器">数据备份  (借助自建服务器)
+</h3><p><strong>设定服务端的地址端口, 备份/同步数据.</strong></p>
+<img src="./md_assets/Screenshot_2026-02-14-22-34-44-746_com.example.to-1771229103110-1.jpg" width=50%/>
+<h1 id="反馈问题">反馈问题
+</h1><p><del>不一定会看, 也不一定会改, 因为我这么长时间用下来没问题挺顺手的 :D</del></p>
+<ul>
+<li>
+<p><code>github</code> <a class="link" href="https://github.com/zx1360/Torrid/issues"  target="_blank" rel="noopener"
+    >https://github.com/zx1360/Torrid/issues</a></p>
+</li>
+<li>
+<p><code>3039328600@qq.com</code></p>
+</li>
+</ul>
+
+</blockquote>
+<h2 id="monarch文档">MONARCH文档
+</h2><p>仓库地址: <a class="link" href="https://github.com/zx1360/monarch"  target="_blank" rel="noopener"
+    >zx1360/monarch: Go编写的http服务器, 用以支持我另一个项目&rsquo;torrid&rsquo;的网络请求.</a></p>
+<blockquote>
+<h1 id="关于monarch">关于MONARCH
+</h1><p><strong><code>GO</code>编写的http服务器, 用以支持另一个项目<code>TORRID</code>的网络请求.</strong></p>
+<h2 id="一开源">一、开源
+</h2><p><a class="link" href="https://github.com/zx1360/monarch"  target="_blank" rel="noopener"
+    >zx1360/monarch: Go编写的http服务器, 用以支持我另一个项目&rsquo;torrid&rsquo;的网络请求.</a></p>
+<h2 id="二高性能-无感知后台运行">二、高性能 无感知后台运行
+</h2><p>由于使用Go编写, 相比java/python开发的http服务器占用内存少, 响应高效, 后台友好.</p>
+<p>可以编写vbs脚本放入开机启动目录以无窗口模式静默运行, 平时几乎不占用性能损耗</p>
+<h2 id="三应用干净">三、应用干净
+</h2><p>一体式以独立目录存在, 所有数据均不存入C盘的文档目录之类的, 仅存于所在的目录中, 可方便地彻底删除.</p>
+<p><strong>==因此, 应当自行做好数据的管理防止丢失数据==</strong></p>
+<h1 id="依赖的数据库">依赖的数据库
+</h1><p><strong>PostgreSQL18.0</strong></p>
+<p>如果要正确运行还需本地运行一个postgres数据库, (自用场景后台运行可忽略性能占用). 下面附上用到的数据表结构以及触发器定义.</p>
+<h2 id="漫画页数据库">漫画页数据库
+</h2><h3 id="建表">建表
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-postgresql" data-lang="postgresql"><span class="line"><span class="cl"><span class="c1">-- 漫画主表（存储单本漫画信息）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">comic_books</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="nb">UUID</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">title</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">chapter_count</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mf">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">image_count</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mf">0</span><span class="p">,</span> <span class="c1">-- 该漫画总图片数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">cover_image</span> <span class="nb">TEXT</span> <span class="c1">-- 封面图相对路径（第一个章节的第一张图）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- 漫画章节表（存储单本漫画的章节信息）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">comic_chapters</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="nb">UUID</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">comic_id</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">64</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dir_name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="c1">-- 格式：001_章节名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">chapter_index</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">image_count</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mf">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">comic_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">comic_books</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- 漫画图片表（存储章节下的图片路径及属性）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">comic_images</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="nb">UUID</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">chapter_id</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">64</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">image_path</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sort_num</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="c1">-- 图片排序号（1、2、3...）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">width</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="c1">-- 图片宽度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">height</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="c1">-- 图片高度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">chapter_id</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">comic_chapters</span><span class="p">(</span><span class="n">id</span><span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- 漫画汇总表（存储所有漫画的统计信息）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">comic_summary</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">id</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">64</span><span class="p">)</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="k">DEFAULT</span> <span class="s1">&#39;comic_total_metadata&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">title</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mf">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="s1">&#39;漫画信息元数据&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">book_count</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mf">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">total_chapter_count</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mf">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">total_image_count</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mf">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">updated_at</span> <span class="nb">TIMESTAMP</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="k">CONSTRAINT</span> <span class="n">comic_summary_single_row</span> <span class="k">CHECK</span> <span class="p">(</span><span class="n">id</span> <span class="o">=</span> <span class="s1">&#39;comic_total_metadata&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- 章节表：comic_id查询+排序索引
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="k">if</span> <span class="k">not</span> <span class="k">exists</span> <span class="n">idx_comic_chapters_comic_id</span> <span class="k">ON</span> <span class="n">comics</span><span class="mf">.</span><span class="n">comic_chapters</span> <span class="p">(</span><span class="n">comic_id</span><span class="p">,</span> <span class="n">chapter_index</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- 图片表：chapter_id查询+排序索引
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">INDEX</span> <span class="k">if</span> <span class="k">not</span> <span class="k">exists</span> <span class="n">idx_comic_images_chapter_id</span> <span class="k">ON</span> <span class="n">comics</span><span class="mf">.</span><span class="n">comic_images</span> <span class="p">(</span><span class="n">chapter_id</span><span class="p">,</span> <span class="n">sort_num</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="藏品页数据库">藏品页数据库
+</h2><h3 id="建表-1">建表
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-postgresql" data-lang="postgresql"><span class="line"><span class="cl"><span class="c1">-- 文件信息表media_assets
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TABLE</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">media_assets</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">		<span class="n">ID</span> <span class="nb">UUID</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">created_at</span> <span class="nb">TIMESTAMPTZ</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="c1">-- 入库时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">updated_at</span> <span class="nb">TIMESTAMPTZ</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="c1">-- 修改时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">captured_at</span> <span class="nb">TIMESTAMPTZ</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span><span class="c1">-- 优先级: EXIF &gt; 修改时间 &gt; 创建时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">file_path</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span><span class="c1">-- 存储中的相对路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">thumb_path</span> <span class="nb">TEXT</span><span class="p">,</span><span class="c1">-- 生成的缩略图/封面图相对路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">preview_path</span> <span class="nb">TEXT</span><span class="p">,</span><span class="c1">-- 生成的预览图相对路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">hash</span> <span class="nb">BYTEA</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">UNIQUE</span><span class="p">,</span><span class="c1">-- SHA-256 用于去重
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">size_bytes</span> <span class="nb">BIGINT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mf">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">mime_type</span> <span class="nb">TEXT</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">is_deleted</span> <span class="nb">BOOLEAN</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="k">FALSE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">sync_count</span> <span class="nb">INTEGER</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="mf">0</span><span class="p">,</span><span class="c1">-- 表示该媒体文件记录从移动端被同步到服务端的次数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">group_id</span> <span class="nb">UUID</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span><span class="c1">-- 指向“主文件”的 ID。如果不为空，代表该文件被捆绑.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">message</span> <span class="nb">TEXT</span> <span class="k">default</span> <span class="k">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="k">CONSTRAINT</span> <span class="n">fk_group_id</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span> <span class="n">group_id</span> <span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">media_assets</span> <span class="p">(</span> <span class="n">ID</span> <span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">SET</span> <span class="k">NULL</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- 为media_assets添加索引
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">idx_media_assets_sync_captured</span> <span class="k">ON</span> <span class="n">media_assets</span> <span class="p">(</span> <span class="n">is_deleted</span><span class="p">,</span> <span class="n">sync_count</span><span class="p">,</span> <span class="n">captured_at</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">CREATE</span> <span class="k">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">idx_media_assets_updated_at</span> <span class="k">ON</span> <span class="n">media_assets</span> <span class="p">(</span> <span class="n">updated_at</span> <span class="p">);</span><span class="c1">-- 更新日期排序.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">idx_media_assets_group_id</span> <span class="k">ON</span> <span class="n">media_assets</span> <span class="p">(</span> <span class="n">group_id</span> <span class="p">);</span><span class="c1">--主文件查询
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">idx_media_assets_mime_type</span> <span class="k">ON</span> <span class="n">media_assets</span> <span class="p">(</span> <span class="n">mime_type</span> <span class="p">);</span><span class="c1">--按文件类型排序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- 标签表tags, 树状结构
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TABLE</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">tags</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">		<span class="n">ID</span> <span class="nb">UUID</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">created_at</span> <span class="nb">TIMESTAMPTZ</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">updated_at</span> <span class="nb">TIMESTAMPTZ</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="k">NAME</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">parent_id</span> <span class="nb">UUID</span><span class="p">,</span><span class="c1">-- 记录其父标签, 根节点为 Null.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">full_path</span> <span class="nb">TEXT</span><span class="p">,</span><span class="c1">-- 冗余字段用于快速搜索, 例如 &#34;Family/2023/Xmas&#34;). 级联更新.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">CONSTRAINT</span> <span class="n">fk_parent_id</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span> <span class="n">parent_id</span> <span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">tags</span> <span class="p">(</span> <span class="n">ID</span> <span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="k">CONSTRAINT</span> <span class="n">uk_tag_name_parent</span> <span class="k">UNIQUE</span> <span class="p">(</span> <span class="k">NAME</span><span class="p">,</span> <span class="n">parent_id</span> <span class="p">)</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- 为tags添加索引
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">idx_tags_parent_id</span> <span class="k">ON</span> <span class="n">tags</span> <span class="p">(</span> <span class="n">parent_id</span> <span class="p">);</span><span class="c1">-- 按父标签查询子标签
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">idx_tags_full_path</span> <span class="k">ON</span> <span class="n">tags</span> <span class="p">(</span> <span class="n">full_path</span> <span class="p">);</span><span class="c1">-- 按完整路径快速搜索
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- 文件标签关联表media_tag_links
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TABLE</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">media_tag_links</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">		<span class="n">media_id</span> <span class="nb">UUID</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">tag_id</span> <span class="nb">UUID</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span> <span class="n">tag_id</span><span class="p">,</span> <span class="n">media_id</span> <span class="p">),</span>
+</span></span><span class="line"><span class="cl">		<span class="k">CONSTRAINT</span> <span class="n">fk_media_id</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span> <span class="n">media_id</span> <span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">media_assets</span> <span class="p">(</span> <span class="n">ID</span> <span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="k">CONSTRAINT</span> <span class="n">fk_tag_id</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span> <span class="n">tag_id</span> <span class="p">)</span> <span class="k">REFERENCES</span> <span class="n">tags</span> <span class="p">(</span> <span class="n">ID</span> <span class="p">)</span> <span class="k">ON</span> <span class="k">DELETE</span> <span class="k">CASCADE</span> 
+</span></span><span class="line"><span class="cl">	<span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- 为media_tag_links添加索引
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">INDEX</span>
+</span></span><span class="line"><span class="cl"><span class="k">IF</span>
+</span></span><span class="line"><span class="cl">	<span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">idx_media_tag_links_media_id</span> <span class="k">ON</span> <span class="n">media_tag_links</span> <span class="p">(</span> <span class="n">media_id</span> <span class="p">);</span><span class="c1">-- 按媒体ID查询关联媒体
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="触发器">触发器
+</h3><h4 id="触发器-自增同步次数">触发器-自增同步次数
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-postgresql" data-lang="postgresql"><span class="line"><span class="cl"><span class="c1">-- 1. 创建触发器函数：仅在未显式更新 sync_count 时自动自增
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">FUNCTION</span> <span class="n">increment_sync_count</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">RETURNS</span> <span class="k">TRIGGER</span> <span class="k">AS</span> <span class="sh">$$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">BEGIN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">-- 只在记录被更新时执行（排除 INSERT 场景）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">TG_OP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;UPDATE&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">-- 核心逻辑：检查是否显式更新了 sync_count 字段
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="c1">-- (OLD.sync_count IS DISTINCT FROM NEW.sync_count) 表示字段值被主动修改过
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="c1">-- 取反后，仅当字段未被显式更新时才自增
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">OLD</span><span class="mf">.</span><span class="n">sync_count</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">NEW</span><span class="mf">.</span><span class="n">sync_count</span><span class="p">)</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">NEW</span><span class="mf">.</span><span class="n">sync_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OLD</span><span class="mf">.</span><span class="n">sync_count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="n">NEW</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">END</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="sh">$$</span> <span class="k">LANGUAGE</span> <span class="s1">plpgsql</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- 2. 重建触发器（如果触发器已存在，先删除再创建）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">DROP</span> <span class="k">TRIGGER</span> <span class="k">IF</span> <span class="k">EXISTS</span> <span class="n">trigger_media_assets_sync_count</span> <span class="k">ON</span> <span class="n">media_assets</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">trigger_media_assets_sync_count</span>
+</span></span><span class="line"><span class="cl"><span class="k">BEFORE</span> <span class="k">UPDATE</span> <span class="k">ON</span> <span class="n">media_assets</span>
+</span></span><span class="line"><span class="cl"><span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span>
+</span></span><span class="line"><span class="cl"><span class="k">EXECUTE</span> <span class="k">FUNCTION</span> <span class="n">increment_sync_count</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="触发器-更新时间">触发器-更新时间
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-postgresql" data-lang="postgresql"><span class="line"><span class="cl"><span class="c1">-- 创建通用的updated_at自动更新触发器函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> 
+</span></span><span class="line"><span class="cl">	<span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">FUNCTION</span> <span class="n">update_updated_at_column</span> <span class="p">(</span> <span class="p">)</span> <span class="k">RETURNS</span> <span class="k">TRIGGER</span> <span class="k">AS</span> <span class="sh">$$</span><span class="w"> </span><span class="k">BEGIN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="n">NEW</span><span class="mf">.</span><span class="n">updated_at</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">RETURN</span><span class="w"> </span><span class="n">NEW</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">END</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="sh">$$</span> <span class="k">LANGUAGE</span> <span class="s1">plpgsql</span> <span class="k">SECURITY</span> <span class="k">DEFINER</span> 
+</span></span><span class="line"><span class="cl"><span class="k">SET</span> <span class="n">search_path</span> <span class="o">=</span> <span class="n">PUBLIC</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- 为media_assets表添加updated_at触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">trigger_media_assets_updated_at</span> <span class="k">BEFORE</span> <span class="k">UPDATE</span> <span class="k">ON</span> <span class="n">media_assets</span> <span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span>
+</span></span><span class="line"><span class="cl"><span class="k">EXECUTE</span> <span class="k">FUNCTION</span> <span class="n">update_updated_at_column</span> <span class="p">(</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- 为tags表添加updated_at触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">trigger_tags_updated_at</span> <span class="k">BEFORE</span> <span class="k">UPDATE</span> <span class="k">ON</span> <span class="n">tags</span> <span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span>
+</span></span><span class="line"><span class="cl"><span class="k">EXECUTE</span> <span class="k">FUNCTION</span> <span class="n">update_updated_at_column</span> <span class="p">(</span> <span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="触发器-tags路径级联更新">触发器-tags路径级联更新
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-postgresql" data-lang="postgresql"><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 1. 先删除可能存在的旧触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">DROP</span> <span class="k">TRIGGER</span> <span class="k">IF</span> <span class="k">EXISTS</span> <span class="n">trg_tags_before_ins_upd</span> <span class="k">ON</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">DROP</span> <span class="k">TRIGGER</span> <span class="k">IF</span> <span class="k">EXISTS</span> <span class="n">trg_tags_after_upd</span> <span class="k">ON</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 2. 创建函数（指定 schema 为 gallery）
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">FUNCTION</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags_compute_full_path</span><span class="p">(</span><span class="n">p_name</span> <span class="nb">TEXT</span><span class="p">,</span> <span class="n">p_parent_id</span> <span class="nb">UUID</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">RETURNS</span> <span class="nb">TEXT</span>
+</span></span><span class="line"><span class="cl"><span class="k">LANGUAGE</span> <span class="n">plpgsql</span>
+</span></span><span class="line"><span class="cl"><span class="k">STABLE</span>
+</span></span><span class="line"><span class="cl"><span class="k">AS</span> <span class="sh">$$
+</span></span></span><span class="line"><span class="cl"><span class="sh">DECLARE
+</span></span></span><span class="line"><span class="cl"><span class="sh">  v_parent_path TEXT;
+</span></span></span><span class="line"><span class="cl"><span class="sh">BEGIN
+</span></span></span><span class="line"><span class="cl"><span class="sh">  IF p_parent_id IS NULL THEN
+</span></span></span><span class="line"><span class="cl"><span class="sh">    RETURN p_name;
+</span></span></span><span class="line"><span class="cl"><span class="sh">  END IF;
+</span></span></span><span class="line"><span class="cl"><span class="sh">
+</span></span></span><span class="line"><span class="cl"><span class="sh">  SELECT full_path INTO v_parent_path
+</span></span></span><span class="line"><span class="cl"><span class="sh">  FROM gallery.tags
+</span></span></span><span class="line"><span class="cl"><span class="sh">  WHERE id = p_parent_id;
+</span></span></span><span class="line"><span class="cl"><span class="sh">
+</span></span></span><span class="line"><span class="cl"><span class="sh">  IF v_parent_path IS NULL THEN
+</span></span></span><span class="line"><span class="cl"><span class="sh">    RETURN p_name;
+</span></span></span><span class="line"><span class="cl"><span class="sh">  END IF;
+</span></span></span><span class="line"><span class="cl"><span class="sh">
+</span></span></span><span class="line"><span class="cl"><span class="sh">  RETURN v_parent_path || &#39;/&#39; || p_name;
+</span></span></span><span class="line"><span class="cl"><span class="sh">END;
+</span></span></span><span class="line"><span class="cl"><span class="sh">$$</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 3. 递归级联更新子节点
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">FUNCTION</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags_cascade_update_full_path</span><span class="p">(</span><span class="n">p_id</span> <span class="nb">UUID</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">RETURNS</span> <span class="nb">VOID</span>
+</span></span><span class="line"><span class="cl"><span class="k">LANGUAGE</span> <span class="n">plpgsql</span>
+</span></span><span class="line"><span class="cl"><span class="k">AS</span> <span class="sh">$$
+</span></span></span><span class="line"><span class="cl"><span class="sh">DECLARE
+</span></span></span><span class="line"><span class="cl"><span class="sh">  v_child RECORD;
+</span></span></span><span class="line"><span class="cl"><span class="sh">  v_new_path TEXT;
+</span></span></span><span class="line"><span class="cl"><span class="sh">BEGIN
+</span></span></span><span class="line"><span class="cl"><span class="sh">  FOR v_child IN
+</span></span></span><span class="line"><span class="cl"><span class="sh">    SELECT id, name FROM gallery.tags WHERE parent_id = p_id
+</span></span></span><span class="line"><span class="cl"><span class="sh">  LOOP
+</span></span></span><span class="line"><span class="cl"><span class="sh">    SELECT full_path || &#39;/&#39; || v_child.name INTO v_new_path
+</span></span></span><span class="line"><span class="cl"><span class="sh">    FROM gallery.tags WHERE id = p_id;
+</span></span></span><span class="line"><span class="cl"><span class="sh">
+</span></span></span><span class="line"><span class="cl"><span class="sh">    UPDATE gallery.tags
+</span></span></span><span class="line"><span class="cl"><span class="sh">    SET full_path = v_new_path,
+</span></span></span><span class="line"><span class="cl"><span class="sh">        updated_at = CURRENT_TIMESTAMP
+</span></span></span><span class="line"><span class="cl"><span class="sh">    WHERE id = v_child.id;
+</span></span></span><span class="line"><span class="cl"><span class="sh">
+</span></span></span><span class="line"><span class="cl"><span class="sh">    PERFORM gallery.tags_cascade_update_full_path(v_child.id);
+</span></span></span><span class="line"><span class="cl"><span class="sh">  END LOOP;
+</span></span></span><span class="line"><span class="cl"><span class="sh">END;
+</span></span></span><span class="line"><span class="cl"><span class="sh">$$</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 4. BEFORE INSERT/UPDATE 触发器函数
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">FUNCTION</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags_before_ins_upd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">RETURNS</span> <span class="k">TRIGGER</span>
+</span></span><span class="line"><span class="cl"><span class="k">LANGUAGE</span> <span class="n">plpgsql</span>
+</span></span><span class="line"><span class="cl"><span class="k">AS</span> <span class="sh">$$
+</span></span></span><span class="line"><span class="cl"><span class="sh">BEGIN
+</span></span></span><span class="line"><span class="cl"><span class="sh">  NEW.full_path := gallery.tags_compute_full_path(NEW.name, NEW.parent_id);
+</span></span></span><span class="line"><span class="cl"><span class="sh">  NEW.updated_at := CURRENT_TIMESTAMP;
+</span></span></span><span class="line"><span class="cl"><span class="sh">  RETURN NEW;
+</span></span></span><span class="line"><span class="cl"><span class="sh">END;
+</span></span></span><span class="line"><span class="cl"><span class="sh">$$</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 5. AFTER UPDATE 触发器函数
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">FUNCTION</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags_after_upd</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">RETURNS</span> <span class="k">TRIGGER</span>
+</span></span><span class="line"><span class="cl"><span class="k">LANGUAGE</span> <span class="n">plpgsql</span>
+</span></span><span class="line"><span class="cl"><span class="k">AS</span> <span class="sh">$$
+</span></span></span><span class="line"><span class="cl"><span class="sh">BEGIN
+</span></span></span><span class="line"><span class="cl"><span class="sh">  IF OLD.name IS DISTINCT FROM NEW.name 
+</span></span></span><span class="line"><span class="cl"><span class="sh">     OR OLD.parent_id IS DISTINCT FROM NEW.parent_id THEN
+</span></span></span><span class="line"><span class="cl"><span class="sh">    PERFORM gallery.tags_cascade_update_full_path(NEW.id);
+</span></span></span><span class="line"><span class="cl"><span class="sh">  END IF;
+</span></span></span><span class="line"><span class="cl"><span class="sh">  RETURN NULL;
+</span></span></span><span class="line"><span class="cl"><span class="sh">END;
+</span></span></span><span class="line"><span class="cl"><span class="sh">$$</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- 6. 绑定触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1">-- ============================================
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">trg_tags_before_ins_upd</span>
+</span></span><span class="line"><span class="cl"><span class="k">BEFORE</span> <span class="k">INSERT</span> <span class="k">OR</span> <span class="k">UPDATE</span> <span class="k">OF</span> <span class="k">name</span><span class="p">,</span> <span class="n">parent_id</span>
+</span></span><span class="line"><span class="cl"><span class="k">ON</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags</span>
+</span></span><span class="line"><span class="cl"><span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span>
+</span></span><span class="line"><span class="cl"><span class="k">EXECUTE</span> <span class="k">FUNCTION</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags_before_ins_upd</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">trg_tags_after_upd</span>
+</span></span><span class="line"><span class="cl"><span class="k">AFTER</span> <span class="k">UPDATE</span> <span class="k">OF</span> <span class="k">name</span><span class="p">,</span> <span class="n">parent_id</span>
+</span></span><span class="line"><span class="cl"><span class="k">ON</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags</span>
+</span></span><span class="line"><span class="cl"><span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span>
+</span></span><span class="line"><span class="cl"><span class="k">EXECUTE</span> <span class="k">FUNCTION</span> <span class="n">gallery</span><span class="mf">.</span><span class="n">tags_after_upd</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="其他说明">其他说明
+</h1><p>更详细的用法参考<code>TORRID</code>应用的使用:</p>
+<p><code>[zx1360/Torrid]</code> [https://github.com/zx1360/Torrid</p>
+
+</blockquote>
+<h2 id="monarch_gizmos文档">MONARCH_GIZMOS文档
+</h2><p>仓库地址: <a class="link" href="https://github.com/zx1360/monarch_gizmos"  target="_blank" rel="noopener"
+    >zx1360/monarch_gizmos: 另一个项目&rsquo;monarch&rsquo;的辅助CLI命令行程序, 处理原始数据并写入本地数据库以供http服务器使用.</a></p>
+<blockquote>
+<h1 id="关于gizmos">关于GIZMOS
+</h1><p><strong>Go程序, 主要承载另一个项目<code>MONARCH</code>的处理.</strong></p>
+<p>简单说就是处理原始数据并写入数据库, 使得monarch能够响应.</p>
+<ul>
+<li>实现漫画文件的检索写入本地postgres数据库.</li>
+<li>本地媒体文件遍历写入本地postgres数据库, 并整理归档. 以及软删除客户端响应的被标记为删除的文件.</li>
+</ul>
+<h1 id="其他说明">其他说明
+</h1><p>虽然与monarch同为Go编写且完全与其联动依赖, 但不与monarch集成而是独立为一个程序主要考虑这些都是偶尔才用到的、一次性的使用场景. <strong><del>也许之后会集成, 再说吧.</del></strong></p>
+
+</blockquote>
+<h1 id="重要ai-prompt展示">重要AI prompt展示
+</h1><h2 id="展示理由以及说明">展示理由以及说明
+</h2><blockquote>
+<p>自从25年12月得到github copilot教育福利的每月免费额度后, 渐渐地越来越依赖这个开发, 尤其是之后的claude opus 4.5, 强的离谱, 效果好的离谱.</p>
+<p>下面给出一些我开发时经常附上的追加要求, 对于规范他的代码以及避免可能让人恼火的问题挺有帮助的. 以及一些具体需求开发时的对话内容供参考:</p>
+</blockquote>
+<h2 id="提示词经验之谈-不保真-0v0">提示词经验之谈 (不保真 0v0)
+</h2><ul>
+<li>
+<p>⭐当希望ai在你开发到一半的项目上引入新功能/修改现有功能, 加上这么一句能让它动手前对你现有代码理解更深. <code>你能分析出我现有项目的实现逻辑和把握我的需求吗? 理解之后, 为我...</code>或<code>理解我项目中这个模块的逻辑, 然后按照我的要求...</code></p>
+</li>
+<li>
+<p>⭐在我给出较复杂/较多点的要求或者是基于已有项目进行新增/改动时, 我一般会在最后加上这一段, 否则它似乎很轻易地就会改动原先代码引入错误.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">必须遵守的要求:
+</span></span><span class="line"><span class="cl">做好相应的适配, ui简约美观, 交互友好.
+</span></span><span class="line"><span class="cl">考虑一些特殊情况, 做好应对防止应用异常.
+</span></span><span class="line"><span class="cl">不对已有功能引入任何破坏性或者可能导致不可预知影响的修改.
+</span></span><span class="line"><span class="cl">修改直到项目无错且能正确按照我的预期运行.
+</span></span><span class="line"><span class="cl">注意代码可维护性.
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>一次对话含多个要求时显式表明&quot;<strong>1.</strong>, <strong>2.</strong>&quot;, 其下的重点要求单独一段而不要与其他要求通过逗号/句号处于同一段:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">我希望对于我的打卡和随笔页相关数据加入&#34;心情记录&#34; 比如用几个表示天气的小表情表示心情(或者其他更适合的形式). 
+</span></span><span class="line"><span class="cl">考虑复用性, 两处(甚至以后的其他模块)都可使用, 
+</span></span><span class="line"><span class="cl">该内容是可选性的, 如果有则记录, 无则不写入数据. 
+</span></span><span class="line"><span class="cl">考虑拓展性以及更改性, 也许之后我会更改心情的种类
+</span></span><span class="line"><span class="cl">另外由于这两部分我现已有数据, 所以增加修改代码以及适配现有代码务必谨慎并且考虑周全!
+</span></span><span class="line"><span class="cl">1. 分析该页面相关逻辑, 我希望做出如下修改: 每天的打卡记录数据类添加一个字段(我应用中现已有该数据类的一些数据, 不知道对于数据类的新加入字段会不会造成问题? 如果不会的话就加入, 做好原先该字段为空的数据的展示问题的兼容.) 并做好相应的ui逻辑等, &#34;// TODO: 保存按钮左边有一片区域空着, 也许放点小表情(天气图标) 表示当天心情?&#34;符合这个信息, 
+</span></span><span class="line"><span class="cl">2. 同样对随笔页面的加入心情记录, (仅写入随笔可用, 追加留言不必).
+</span></span><span class="line"><span class="cl">返回的修改结果应无错并且可以按预期运行, 修改直到代码正确!
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="举个栗子">举个栗子
+</h2><h3 id="开发需求">开发需求
+</h3><p>开发torrid的<code>gallery藏品页</code>模块, 它是一个用以回顾我保存于电脑的所有视频/图片文件并打标签和标记删除的工具, 分为三部分:</p>
+<ul>
+<li><strong>torrid客户端</strong>, 提供内容呈现和交互.</li>
+<li><strong>monarch服务端</strong>, 实际的文件存储, 处理http请求.</li>
+<li><strong>monarch_gizmos</strong>, 辅助CLI程序, 处理原始文件写入数据库以及实际对标记删除的文件进行软删除.</li>
+</ul>
+<h3 id="以md文件记录需求">以md文件记录需求
+</h3><h4 id="项目基准文档md">项目基准文档.md
+</h4><blockquote>
+<h1 id="项目基准文档">项目基准文档
+</h1><hr>
+<h2 id="角色设定-role-definition">角色设定 (Role Definition)
+</h2><p>你是一位精通 Golang (后端)、Flutter (移动端)、关系型数据库 (PostgreSQL 和 Flutter 端的 sqflite) 以及 <strong>离线优先 (Offline-First)</strong> 架构的全栈架构师。</p>
+<p>你的任务是实现一个运行在局域网内的个人媒体管理系统（单服务器、单客户端场景）。</p>
+<hr>
+<h2 id="核心目标-core-objective">核心目标 (Core Objective)
+</h2><p>构建一个私有化部署系统，用于回顾、打标签、分类和整理个人的海量图片/视频。系统需支持 Android 端在 <strong>局域网 (LAN)</strong> 环境下的离线操作，并保证数据的最终一致性。</p>
+<hr>
+<h2 id="技术栈-tech-stack">技术栈 (Tech Stack)
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>层级</th>
+          <th>技术</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Database</strong></td>
+          <td>PostgreSQL</td>
+          <td>全表主键使用 UUIDv4 以支持离线生成无冲突 ID</td>
+      </tr>
+      <tr>
+          <td><strong>Backend - gallery</strong></td>
+          <td>Go (CLI)</td>
+          <td>负责文件扫描、缩略图生成、物理文件归档、数据库入库</td>
+      </tr>
+      <tr>
+          <td><strong>Backend - monarch</strong></td>
+          <td>Go (HTTP)</td>
+          <td>负责 API 响应、文件服务、数据同步</td>
+      </tr>
+      <tr>
+          <td><strong>Frontend - torrid</strong></td>
+          <td>Flutter</td>
+          <td>使用 sqflite 进行本地持久化和状态管理以及暂存对媒体文件的所有操作</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<h2 id="数据一致性与约束-data-consistency">数据一致性与约束 (Data Consistency)
+</h2><h3 id="bundling-deletion捆绑删除">Bundling Deletion（捆绑删除）
+</h3><ul>
+<li><strong>删除&quot;主文件&quot; (Group Lead)</strong> 时，将组内所有文件的 <code>is_deleted</code> 设为 <code>true</code>，即一并删除所有组内文件</li>
+<li><strong>将某文件记录的 <code>group_id</code> 字段设为 <code>null</code></strong> 表示脱离捆绑</li>
+</ul>
+<hr>
+
+</blockquote>
+<h4 id="数据库文档md">数据库文档.md
+</h4><blockquote>
+<h1 id="gallery-数据库-schema-文档">Gallery 数据库 Schema 文档
+</h1><blockquote>
+<p>模式名: <code>gallery</code></p>
+</blockquote>
+<p><strong>设计原则</strong>: 为确保数据一致性和原子性，建议合理使用事务来确保操作完整性。</p>
+<hr>
+<h2 id="一数据表定义">一、数据表定义
+</h2><h3 id="1-文件信息表-media_assets">1. 文件信息表 <code>media_assets</code>
+</h3><p>存储媒体文件的核心信息，包括存储路径、哈希值、缩略图等。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">media_assets</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ID</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="w">  </span><span class="c1">-- 入库时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">updated_at</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="w">  </span><span class="c1">-- 修改时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">captured_at</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">                           </span><span class="c1">-- 优先级: EXIF &gt; 修改时间 &gt; 创建时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">file_path</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">                                    </span><span class="c1">-- 存储中的相对路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">thumb_path</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w">                                            </span><span class="c1">-- 生成的缩略图/封面图相对路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">preview_path</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w">                                          </span><span class="c1">-- 生成的预览图相对路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">hash</span><span class="w"> </span><span class="n">BYTEA</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span><span class="w">                                 </span><span class="c1">-- SHA-256 用于去重
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">size_bytes</span><span class="w"> </span><span class="nb">BIGINT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">mime_type</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">is_deleted</span><span class="w"> </span><span class="nb">BOOLEAN</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">FALSE</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sync_count</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">                      </span><span class="c1">-- 表示该媒体文件记录从移动端被同步到服务端的次数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">group_id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">                                 </span><span class="c1">-- 指向&#34;主文件&#34;的 ID。如果不为空，代表该文件被捆绑
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">message</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_group_id</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">group_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">media_assets</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="k">NULL</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="索引定义">索引定义
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 按删除状态、同步次数和拍摄时间查询
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">idx_media_assets_sync_captured</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">media_assets</span><span class="w"> </span><span class="p">(</span><span class="n">is_deleted</span><span class="p">,</span><span class="w"> </span><span class="n">sync_count</span><span class="p">,</span><span class="w"> </span><span class="n">captured_at</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 按更新日期排序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">idx_media_assets_updated_at</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">media_assets</span><span class="w"> </span><span class="p">(</span><span class="n">updated_at</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 主文件查询
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">idx_media_assets_group_id</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">media_assets</span><span class="w"> </span><span class="p">(</span><span class="n">group_id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 按文件类型排序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">idx_media_assets_mime_type</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">media_assets</span><span class="w"> </span><span class="p">(</span><span class="n">mime_type</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="2-标签表-tags">2. 标签表 <code>tags</code>
+</h3><p>树状结构的标签系统，支持层级关系。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">ID</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">created_at</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">updated_at</span><span class="w"> </span><span class="n">TIMESTAMPTZ</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">NAME</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">parent_id</span><span class="w"> </span><span class="n">UUID</span><span class="p">,</span><span class="w">                                             </span><span class="c1">-- 记录其父标签, 根节点为 Null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">full_path</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w">                                             </span><span class="c1">-- 冗余字段用于快速搜索 (例如 &#34;Family/2023/Xmas&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_parent_id</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">parent_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">uk_tag_name_parent</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">NAME</span><span class="p">,</span><span class="w"> </span><span class="n">parent_id</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="索引定义-1">索引定义
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 按父标签查询子标签
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">idx_tags_parent_id</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="p">(</span><span class="n">parent_id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 按完整路径快速搜索
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">idx_tags_full_path</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="p">(</span><span class="n">full_path</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="3-文件标签关联表-media_tag_links">3. 文件标签关联表 <code>media_tag_links</code>
+</h3><p>关联媒体文件与标签的多对多关系表。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">media_tag_links</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">media_id</span><span class="w"> </span><span class="n">UUID</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">tag_id</span><span class="w"> </span><span class="n">UUID</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">tag_id</span><span class="p">,</span><span class="w"> </span><span class="n">media_id</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_media_id</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">media_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">media_assets</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_tag_id</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">tag_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">CASCADE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="索引定义-2">索引定义
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 按媒体ID查询关联标签
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">idx_media_tag_links_media_id</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">media_tag_links</span><span class="w"> </span><span class="p">(</span><span class="n">media_id</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="二触发器定义">二、触发器定义
+</h2><h3 id="1-通用更新时间触发器">1. 通用更新时间触发器
+</h3><p>自动维护 <code>updated_at</code> 字段的触发器函数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 创建通用的 updated_at 自动更新触发器函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">update_updated_at_column</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">RETURNS</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">BEGIN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">updated_at</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="k">NEW</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">END</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="w"> </span><span class="k">SECURITY</span><span class="w"> </span><span class="k">DEFINER</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">search_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">PUBLIC</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="绑定到数据表">绑定到数据表
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 为 media_assets 表添加 updated_at 触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">trigger_media_assets_updated_at</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">media_assets</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">EXECUTE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">update_updated_at_column</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- 为 tags 表添加 updated_at 触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">trigger_tags_updated_at</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">EXECUTE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">update_updated_at_column</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="2-标签-full_path-级联更新触发器">2. 标签 full_path 级联更新触发器
+</h3><p>维护标签层级路径的自动计算与级联更新。</p>
+<h4 id="辅助函数">辅助函数
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 计算单条标签的 full_path
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">tags_compute_full_path</span><span class="p">(</span><span class="n">p_name</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">p_parent_id</span><span class="w"> </span><span class="n">UUID</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">RETURNS</span><span class="w"> </span><span class="nb">TEXT</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">DECLARE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">v_parent_path</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">BEGIN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">p_parent_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">RETURN</span><span class="w"> </span><span class="n">p_name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">full_path</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_parent_path</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_parent_id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="n">v_parent_path</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">p_name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">END</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">$$</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="递归更新函数">递归更新函数
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 递归级联更新子节点 full_path
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">tags_cascade_update_full_path</span><span class="p">(</span><span class="n">p_id</span><span class="w"> </span><span class="n">UUID</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">RETURNS</span><span class="w"> </span><span class="n">VOID</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">DECLARE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">v_child</span><span class="w"> </span><span class="n">UUID</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">v_name</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">v_parent_id</span><span class="w"> </span><span class="n">UUID</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">BEGIN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">-- 更新当前节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">SELECT</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">parent_id</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">v_name</span><span class="p">,</span><span class="w"> </span><span class="n">v_parent_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="n">full_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tags_compute_full_path</span><span class="p">(</span><span class="n">v_name</span><span class="p">,</span><span class="w"> </span><span class="n">v_parent_id</span><span class="p">),</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">updated_at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">-- 递归更新所有子节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="n">v_child</span><span class="w"> </span><span class="k">IN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">parent_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">LOOP</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">PERFORM</span><span class="w"> </span><span class="n">tags_cascade_update_full_path</span><span class="p">(</span><span class="n">v_child</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="n">LOOP</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">END</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">$$</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="触发器函数">触发器函数
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- BEFORE INSERT/UPDATE：先计算本节点 full_path
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">tags_before_ins_upd</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">RETURNS</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">BEGIN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">full_path</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">tags_compute_full_path</span><span class="p">(</span><span class="k">NEW</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">parent_id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">updated_at</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="k">NEW</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">END</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">$$</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">-- AFTER INSERT/UPDATE：触发级联更新子节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">tags_after_ins_upd</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">RETURNS</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">BEGIN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">PERFORM</span><span class="w"> </span><span class="n">tags_cascade_update_full_path</span><span class="p">(</span><span class="k">NEW</span><span class="p">.</span><span class="n">id</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">END</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">$$</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="触发器绑定">触发器绑定
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 绑定触发器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">trg_tags_before_ins_upd</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">OF</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">parent_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">EXECUTE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">tags_before_ins_upd</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">trg_tags_after_ins_upd</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">OF</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">parent_id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">ON</span><span class="w"> </span><span class="n">tags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">EXECUTE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">tags_after_ins_upd</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="3-同步次数自增触发器">3. 同步次数自增触发器
+</h3><p>每次更新 <code>media_assets</code> 记录时自动递增 <code>sync_count</code> 字段。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 创建触发器函数：更新时自动自增 sync_count
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">increment_sync_count</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">RETURNS</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">BEGIN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">-- 只在记录被更新时执行（排除 INSERT 场景）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="n">TG_OP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;UPDATE&#39;</span><span class="w"> </span><span class="k">THEN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">-- 将新记录的 sync_count 设置为 旧值 + 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="k">NEW</span><span class="p">.</span><span class="n">sync_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">sync_count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="k">NEW</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">END</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="触发器绑定-1">触发器绑定
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="c1">-- 创建触发器，绑定到 media_assets 表的 UPDATE 事件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">trigger_media_assets_sync_count</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">media_assets</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">EXECUTE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">increment_sync_count</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="三字段说明速查表">三、字段说明速查表
+</h2><h3 id="media_assets-表">media_assets 表
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>字段名</th>
+          <th>类型</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>ID</code></td>
+          <td>UUID</td>
+          <td>主键，唯一标识</td>
+      </tr>
+      <tr>
+          <td><code>created_at</code></td>
+          <td>TIMESTAMPTZ</td>
+          <td>入库时间</td>
+      </tr>
+      <tr>
+          <td><code>updated_at</code></td>
+          <td>TIMESTAMPTZ</td>
+          <td>修改时间（自动更新）</td>
+      </tr>
+      <tr>
+          <td><code>captured_at</code></td>
+          <td>TIMESTAMPTZ</td>
+          <td>拍摄时间，优先级：EXIF &gt; 修改时间 &gt; 创建时间</td>
+      </tr>
+      <tr>
+          <td><code>file_path</code></td>
+          <td>TEXT</td>
+          <td>存储中的相对路径</td>
+      </tr>
+      <tr>
+          <td><code>thumb_path</code></td>
+          <td>TEXT</td>
+          <td>缩略图/封面图相对路径</td>
+      </tr>
+      <tr>
+          <td><code>preview_path</code></td>
+          <td>TEXT</td>
+          <td>预览图相对路径</td>
+      </tr>
+      <tr>
+          <td><code>hash</code></td>
+          <td>BYTEA</td>
+          <td>SHA-256 哈希，用于去重</td>
+      </tr>
+      <tr>
+          <td><code>size_bytes</code></td>
+          <td>BIGINT</td>
+          <td>文件大小（字节）</td>
+      </tr>
+      <tr>
+          <td><code>mime_type</code></td>
+          <td>TEXT</td>
+          <td>MIME 类型</td>
+      </tr>
+      <tr>
+          <td><code>is_deleted</code></td>
+          <td>BOOLEAN</td>
+          <td>软删除标记</td>
+      </tr>
+      <tr>
+          <td><code>sync_count</code></td>
+          <td>INTEGER</td>
+          <td>从移动端同步到服务端的次数</td>
+      </tr>
+      <tr>
+          <td><code>group_id</code></td>
+          <td>UUID</td>
+          <td>指向主文件的 ID，用于文件捆绑</td>
+      </tr>
+      <tr>
+          <td><code>message</code></td>
+          <td>TEXT</td>
+          <td>附加消息</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="tags-表">tags 表
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>字段名</th>
+          <th>类型</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>ID</code></td>
+          <td>UUID</td>
+          <td>主键</td>
+      </tr>
+      <tr>
+          <td><code>created_at</code></td>
+          <td>TIMESTAMPTZ</td>
+          <td>创建时间</td>
+      </tr>
+      <tr>
+          <td><code>updated_at</code></td>
+          <td>TIMESTAMPTZ</td>
+          <td>修改时间（自动更新）</td>
+      </tr>
+      <tr>
+          <td><code>NAME</code></td>
+          <td>TEXT</td>
+          <td>标签名称</td>
+      </tr>
+      <tr>
+          <td><code>parent_id</code></td>
+          <td>UUID</td>
+          <td>父标签 ID，根节点为 NULL</td>
+      </tr>
+      <tr>
+          <td><code>full_path</code></td>
+          <td>TEXT</td>
+          <td>完整路径（冗余字段），如 &ldquo;Family/2023/Xmas&rdquo;</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="media_tag_links-表">media_tag_links 表
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>字段名</th>
+          <th>类型</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>media_id</code></td>
+          <td>UUID</td>
+          <td>媒体文件 ID</td>
+      </tr>
+      <tr>
+          <td><code>tag_id</code></td>
+          <td>UUID</td>
+          <td>标签 ID</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<p><em>文档生成时间: 2026-02-17</em></p>
+
+</blockquote>
+<h4 id="torrid文档md">torrid文档.md
+</h4><blockquote>
+<h1 id="torrid">Torrid
+</h1><h2 id="flutter-app离线优先">Flutter App（离线优先）
+</h2><p>前端应用：Flutter + sqflite<br>
+逻辑：闭环的资源管理与交互</p>
+<hr>
+<h2 id="local-data-structure-sqflite">Local Data Structure (sqflite)
+</h2><h3 id="本地数据表结构">本地数据表结构
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>表名</th>
+          <th>说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>media_assets</code></td>
+          <td>镜像服务端的 <code>media_assets</code> 表（轻量级元数据）</td>
+      </tr>
+      <tr>
+          <td><code>tags</code></td>
+          <td>存储标签记录（初始为从服务端获取的初始值）</td>
+      </tr>
+      <tr>
+          <td><code>media_tag_links</code></td>
+          <td>存储媒体与标签的关联记录（从服务端增量获取写入）</td>
+      </tr>
+  </tbody>
+</table></div>
+<blockquote>
+<p><strong>注意</strong>：表约束与服务端的对应表保持一致。由于客户端本地的表数据量级远小于服务端，可不必过于在意性能优化。</p>
+</blockquote>
+<hr>
+<h2 id="the-review-cycle核心业务闭环">The &ldquo;Review Cycle&rdquo;（核心业务闭环）
+</h2><h3 id="1-fetch获取">1. Fetch（获取）
+</h3><p>用户点击&quot;加载新一批&quot;（可自指定数量）。App 请求 monarch，将获取到的 JSON 数据按逻辑存储到本地 sqflite（基本是原数据表的镜像）。</p>
+<h3 id="2-cache缓存">2. Cache（缓存）
+</h3><p>App 下载这批文件的缩略图 + 预览图存入本地存储（外部应用私有目录下的 <code>/gallery/yyyy-mm/...</code>）。</p>
+<h3 id="3-review审阅">3. Review（审阅）
+</h3><p>用户滑动阅览、打标签、标记删除。</p>
+<h3 id="4-bundling捆绑">4. Bundling（捆绑）
+</h3><p>用户长按选 A, B, C → 设 A 为主：</p>
+<ul>
+<li><strong>逻辑</strong>：更新 B, C 的 <code>group_id = A.id</code></li>
+<li><strong>UI 表现</strong>：隐藏 B, C，只显示 A（带堆叠图标）</li>
+</ul>
+<h3 id="5-tagging打标签">5. Tagging（打标签）
+</h3><p>对 A 打标签：</p>
+<ul>
+<li><strong>建议逻辑</strong>：标签仅关联 A，但搜索时 B, C 视为隐式包含</li>
+</ul>
+<h3 id="6-push推送">6. Push（推送）
+</h3><p>App 将经过操作的文件记录和 <code>media_tag_links</code> 表中与这些文件记录关联的文件-标签关联记录以及全量标签记录转为 JSON 上传服务端。</p>
+<h3 id="7-cleanup空间闭环">7. Cleanup（空间闭环）
+</h3><p>当 monarch 确认同步成功后，App 自动删除上传数据中相关的媒体文件的缩略图和预览图以及相关数据表中的相关数据记录，为下一批文件腾出手机空间。</p>
+<hr>
+<h2 id="数据同步追加详细说明">数据同步追加详细说明
+</h2><h3 id="客户端向服务端获取文件信息">客户端向服务端获取文件信息
+</h3><p>响应包含：</p>
+<ul>
+<li>指定量的文件信息记录</li>
+<li>全量 <code>tags</code> 信息记录</li>
+<li>与响应中含有的文件信息关联的所有 <code>media_tag</code> 信息记录</li>
+</ul>
+<h3 id="客户端向服务端提交信息">客户端向服务端提交信息
+</h3><p>服务端处理逻辑：</p>
+<ul>
+<li><strong>文件信息记录</strong>：采用这些数据对服务端数据库对应记录（除了 <code>file_path</code> 字段）进行更新</li>
+<li><strong>Tags</strong>：删除原先所有的，以现在这些新数据为根据全部写入</li>
+<li><strong>Media_tag 记录数据</strong>：服务端数据库 <code>media_tag</code> 表中含有新传入 media 记录的 ID 的全部删除，然后再写入现在传入的 <code>media_tag</code> 信息</li>
+</ul>
+<h3 id="更详细的说明">更详细的说明
+</h3><ol>
+<li>用户有可能对文件进行多轮次的下载，可能在 App 连续拉取好几批</li>
+<li>客户端上传时 URL 中 <code>offset</code> 值为本地记录中存在的文件记录条数</li>
+<li>服务端通过类似以下 SQL 确保能连续增量拉取：
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">media_assets</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">is_deleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">sync_count</span><span class="w"> </span><span class="k">ASC</span><span class="p">,</span><span class="w"> </span><span class="n">captured_at</span><span class="w"> </span><span class="k">ASC</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">LIMIT</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;limit&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;offset&#39;</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>客户端向服务端增量覆盖</li>
+</ol>
+<hr>
+<h2 id="uiux">UI/UX
+</h2><blockquote>
+<p>追求友好交互，画面简约美观</p>
+</blockquote>
+<h3 id="review-mode">Review Mode
+</h3><p>类似相册流或卡片堆叠。</p>
+<h3 id="详细信息">详细信息
+</h3><p>通过插件实现基本的缩放等操作，修改双击操作为查看文件详细信息。</p>
+<hr>
+<h2 id="技术要点">技术要点
+</h2><ul>
+<li>本地轻量数据库（sqflite），有关数据库保持与服务端数据库表结构一致</li>
+<li>首次在局域网拉取快照（数据 + 缩略图/预览图）</li>
+<li>后续增量同步，支持离线队列与重试</li>
+<li>所有的打标签/标记删除等操作在本地离线实现，记录于与服务端数据表结构相同的 sqflite 中</li>
+<li>同步时增量上传，之后删除上传的 sqflite 中相关记录，这一步确保原子性</li>
+<li>与 monarch 的 HTTP 服务器对应的 API</li>
+</ul>
+<hr>
+<h2 id="api-响应数据格式示例">API 响应数据格式示例
+</h2><p><strong>Endpoint</strong>: <code>/api/gallery/batch</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;media_assets&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;71ab794a-25cf-46a7-a3b8-622e37474e5d&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;created_at&#34;</span><span class="p">:</span> <span class="s2">&#34;2026-01-28T19:40:16.961975+08:00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;updated_at&#34;</span><span class="p">:</span> <span class="s2">&#34;2026-01-28T19:40:16.961975+08:00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;captured_at&#34;</span><span class="p">:</span> <span class="s2">&#34;2008-08-29T14:10:56+08:00&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;file_path&#34;</span><span class="p">:</span> <span class="s2">&#34;2008-08\\Super Sonico超级索尼子壁纸.jpg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;thumb_path&#34;</span><span class="p">:</span> <span class="s2">&#34;2008-08\\Super Sonico超级索尼子壁纸_thumb.jpg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;preview_path&#34;</span><span class="p">:</span> <span class="s2">&#34;2008-08\\Super Sonico超级索尼子壁纸_preview.jpg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;hash&#34;</span><span class="p">:</span> <span class="s2">&#34;9xy9SF4oUH/E3CpFOU26qnJU4rcEClHEFMo5go9Lyus=&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;size_bytes&#34;</span><span class="p">:</span> <span class="mi">1942070</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;mime_type&#34;</span><span class="p">:</span> <span class="s2">&#34;image/jpeg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;is_deleted&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;sync_count&#34;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;group_id&#34;</span><span class="p">:</span> <span class="kc">null</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">...</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;tags&#34;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;media_tag_links&#34;</span><span class="p">:</span> <span class="kc">null</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>注：<code>tags</code> 和 <code>media_tag_links</code> 值可能初始为空，不为空则为 JSON 格式的数据表中的数据的列表。</p>
+</blockquote>
+<hr>
+
+</blockquote>
+<h4 id="monarch文档md">monarch文档.md
+</h4><blockquote>
+<h1 id="monarch">Monarch
+</h1><h2 id="golang-http-服务器在线-api">Golang HTTP 服务器（在线 API）
+</h2><p>后端程序 monarch：服务端 (HTTP API)<br>
+逻辑：智能分发与同步</p>
+<hr>
+<h2 id="api-端点">API 端点
+</h2><h3 id="获取批量媒体数据">获取批量媒体数据
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /api/gallery/batch?limit={limit}&amp;offset={offset}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>响应 JSON 格式的一批次的媒体文件信息、全量的标签数据记录以及 <code>media_tag_link</code> 表中与响应的媒体文件关联的所有文件-标签关系（如果有）。</p>
+<p><strong>参考查询代码</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">media_assets</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">is_deleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">sync_count</span><span class="w"> </span><span class="k">ASC</span><span class="p">,</span><span class="w"> </span><span class="n">captured_at</span><span class="w"> </span><span class="k">ASC</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">LIMIT</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;limit&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">OFFSET</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;offset&#39;</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="下载原文件">下载原文件
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /api/gallery/{id}/file
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="下载缩略图">下载缩略图
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /api/gallery/{id}/thumb
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="下载预览图">下载预览图
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /api/gallery/{id}/preview
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="获取完整标签树">获取完整标签树
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /api/gallery/tags
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h3 id="推送数据到服务端">推送数据到服务端
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">POST /api/gallery/push
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>根据 App 发来的 JSON 格式的数据表记录数据更新数据库（<code>media_assets</code> 的 <code>file_path</code> 字段不变）。</p>
+<p><strong>注意</strong>：同步数据到服务端时将每个媒体文件记录中 <code>sync_count</code> 字段加一。</p>
+<hr>
+<h2 id="核心特性">核心特性
+</h2><ul>
+<li>提供&quot;初次快照 + 增量同步&quot;协议（面向局域网，离线友好）</li>
+<li>响应文件下载请求</li>
+<li>通过 Header 实现简单的 API Key 验证</li>
+</ul>
+<hr>
+
+</blockquote>
+<h4 id="gallery文档md-monarch_gizmos">gallery文档.md (monarch_gizmos)
+</h4><blockquote>
+<h1 id="gallery">Gallery
+</h1><h2 id="golang-扫描搬运器离线批处理">Golang 扫描/搬运器（离线批处理）
+</h2><p>后端程序 gallery：工作节点 (CLI Tool)<br>
+逻辑：负责物理文件的摄入与生命周期管理</p>
+<hr>
+<h2 id="ingestion-pipeline摄入流水线---选项1">Ingestion Pipeline（摄入流水线 - 选项1）
+</h2><p>深度遍历路径1（<code>rawDir</code>），获取所有图片/视频（<code>.jpg</code>, <code>.webp</code>, <code>.jpeg</code>, <code>.png</code>, <code>.mp4</code>, <code>.gif</code> 等所有可以称之为图片和视频的文件），进行如下操作：</p>
+<h3 id="1-去重检查">1. 去重检查
+</h3><ul>
+<li>计算该文件的 SHA-256 哈希值</li>
+<li>如果数据库中有该记录，则将该文件移动到路径3（<code>deletedDir</code>），并跳过后续步骤进入下一个文件的操作</li>
+</ul>
+<h3 id="2-元信息抽取">2. 元信息抽取
+</h3><p>抽取媒体元信息：</p>
+<ul>
+<li>尺寸</li>
+<li>时长</li>
+<li>文件日期（优先级：EXIF &gt; 修改时间 &gt; 创建时间）</li>
+<li>文件哈希</li>
+<li>感知哈希等</li>
+</ul>
+<h3 id="3-文件日期计算规则">3. 文件日期计算规则
+</h3><p>选取文件的&quot;创建时间&quot;和&quot;修改时间&quot;中更早的那个。</p>
+<h3 id="4-归档移动">4. 归档移动
+</h3><p>按 <code>yyyy-mm</code> 归档移动（move）到路径2（<code>mediaDir</code>）：</p>
+<ul>
+<li><code>mediaDir</code> 表示的目录下有若干 <code>yyyy-mm</code> 形式的文件夹，如果没有则创建</li>
+<li>记录状态等</li>
+</ul>
+<h3 id="5-缩略图生成">5. 缩略图生成
+</h3><blockquote>
+<p>如果是视频则选取时间上第10%的那一帧的图片，后续与一般图片相同处理。另外 <code>.gif</code> 之类的文件的压缩仍旧是&quot;内容完整&quot;的，仅对分辨率压缩。</p>
+</blockquote>
+<h4 id="51-网格展示缩略图256256">5.1 网格展示缩略图（256×256）
+</h4><ul>
+<li>非方形原图则尽量选取中心部位</li>
+<li>等比缩放至生成图不留白（即可截取但不可留白）</li>
+</ul>
+<h4 id="52-预览图最大边-512px">5.2 预览图（最大边 512px）
+</h4><p>按原图比例等比缩放到最大边为 512px。</p>
+<h3 id="6-文件从属关系">6. 文件从属关系
+</h3><p>逻辑上各缩略图是&quot;从属&quot;于原图的：</p>
+<ul>
+<li>后续执行&quot;删除&quot;操作时将原图和缩略图以及预览图同步移动到 <code>deletedDir</code></li>
+</ul>
+<h3 id="7-文件移动规则">7. 文件移动规则
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>文件类型</th>
+          <th>目标路径</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>原文件</td>
+          <td><code>Media/YYYY-MM/filename.ext</code></td>
+      </tr>
+      <tr>
+          <td>缩略图</td>
+          <td><code>thumbs/YYYY-MM/filename_thumb.ext</code></td>
+      </tr>
+      <tr>
+          <td>预览图</td>
+          <td><code>previews/YYYY-MM/filename_preview.ext</code></td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="8-数据入库">8. 数据入库
+</h3><p>将各数据写入 PostgreSQL。</p>
+<hr>
+<h2 id="execution-pipeline执行流水线---选项2">Execution Pipeline（执行流水线 - 选项2）
+</h2><h3 id="delete-handling删除处理">Delete Handling（删除处理）
+</h3><ul>
+<li>查询 <code>is_deleted = true</code> 的记录</li>
+<li>将物理文件移动到 <code>deleted/</code> 目录（作为安全网，不立即物理删除）</li>
+<li>包括所有 <code>group_id</code> 为该文件 ID 的及相关文件的缩略图和预览图</li>
+</ul>
+<h3 id="cleanup清理">Cleanup（清理）
+</h3><p>清理空文件夹。</p>
+<hr>
+<h2 id="开发说明">开发说明
+</h2><ul>
+<li>做好错误处理与一般的兜底以及打印输出提示信息</li>
+<li>遍历文件/写入数据库的批量优化，引入并发控制</li>
+<li>视频处理使用 FFmpeg（相关依赖已加入环境变量）</li>
+</ul>
+<hr>
+
+</blockquote>
+<h3 id="agent对话">agent对话
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">我正在开发这个总项目的torrid相关部分, 请你查看我的五个项目文档和gallery目录下相关文件厘清我的项目逻辑. 重点关注标记&#34;PS:&#34; 和&#34;TODO:&#34; 的注释和重要的注释部分理会我的开发意图.
+</span></span><span class="line"><span class="cl">以推荐的项目组织结构和实现方式完成我的需求. 对我的开发要求有不明白的地方首先提问而不是立马着手做.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>然后ai列举了几点不明确的地方, 然后分别详细说明即可.</strong></p>
+<h2 id="另外想说">另外想说
+</h2><blockquote>
+<p>ai就像什么都特懂且对于什么都很有经验, 所以需要你在关键点尽可能<strong>描述好你的需求</strong>防止他按照&quot;一般做法&quot;实现而忽视了你的项目现状和你的实际需求.</p>
+</blockquote>
+<p>以往我学编程技术都是<strong>在哔站跟着视频一期一期从<code>入门-&gt;上手-&gt;学api-&gt;实战-&gt;实际开发</code>走这个流程</strong>, 这样子学效率暂且不说, 最挫败学习热情是最主要的. 我就以我试图开发一个&quot;记录每日完成设定任务的工具&quot;这一几乎在不能更简单的想法的实现过程开始现身说法吧, 下面是我痛苦又成效甚微的路线:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">flowchart TD
+</span></span><span class="line"><span class="cl">	A[学C语言] -- 一个多月每天挺高强度还认真记笔记地学, 但是发现不适合做图形应用 --&gt; B{学Qt开发}
+</span></span><span class="line"><span class="cl">	B -- C++写ui布局和样式真的很蛋疼. --&gt; F[引入QSS]
+</span></span><span class="line"><span class="cl">	C[学习前端三大件] --&gt; F
+</span></span><span class="line"><span class="cl">	F -- 只是封装页面跳转就让我小一周都实现不了 --&gt;E[Qt with Python]
+</span></span><span class="line"><span class="cl">	B -- 想看看基于python会不会简单点 --&gt; D[PyQt]
+</span></span><span class="line"><span class="cl">	C--&gt;H[Python的Flask框架实现http服务器]
+</span></span><span class="line"><span class="cl">	F -- 苦恼于前端三大件这么方便但是只能做前端, 直到... --&gt;G[学习NodeJs]
+</span></span><span class="line"><span class="cl">	subgraph 网页应用 #仅在电脑端可用.
+</span></span><span class="line"><span class="cl">		H[Python的Flask做后端实现功能, 第一版]
+</span></span><span class="line"><span class="cl">		G[学习NodeJs, 原生前端+nodejs实现功能, 第二版]
+</span></span><span class="line"><span class="cl">		G -- 使用jQuery重构原生前端 --&gt;I[第三版网页应用]
+</span></span><span class="line"><span class="cl">		I--学习Vue框架, 第二次重构前端以及部分后端--&gt;J[第四版网页应用]
+</span></span><span class="line"><span class="cl">		K(想使手机可操作, 学习微信小程序开发.)-- 花了段时间稍微入门--&gt;L[发现不适合我的场景, 时间试错成本蛮高]
+</span></span><span class="line"><span class="cl">	end
+</span></span><span class="line"><span class="cl">	J--数据迁移--&gt;R
+</span></span><span class="line"><span class="cl">	S[学mysql]--&gt;T[postgresql]
+</span></span><span class="line"><span class="cl">	subgraph 移动应用 #离线使用+自用服务器
+</span></span><span class="line"><span class="cl">		M[学习Flutter] -- 5个月学习,自主开发+1个月AI助力--&gt;O(当前torrid应用)
+</span></span><span class="line"><span class="cl">		N[学习Go] --高性能, 低占用--&gt;P[http服务器&#39;monarch&#39;]
+</span></span><span class="line"><span class="cl">		N--高效的CLI程序--&gt;Q[monarch_gizmos]
+</span></span><span class="line"><span class="cl">		T
+</span></span><span class="line"><span class="cl">		O &amp; P &amp; Q &amp; T --联动--&gt;R[业务闭环的自用软件/服务]
+</span></span><span class="line"><span class="cl">	end
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>如果页面无法渲染mermaid:</strong></p>
+<img src="./md_assets/image-20260216214009666.png" width=100%/>
+<p>假设按照以往我学编程技术那样<strong>在哔站跟着视频一期一期从<code>入门-&gt;上手-&gt;学api-&gt;实战-&gt;实际开发</code>走这个流程</strong>, 即使分身出四五个我自己估计我都无法做出现有的这些东西.</p>
+<p>管他的写到一半先发了吧, 年后再细说&hellip;</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/flutter/">Flutter</a>
+        
+            <a href="/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/">客户端</a>
+        
+            <a href="/tags/agentic-coding/">Agentic Coding</a>
+        
+            <a href="/tags/go/">Go</a>
+        
+            <a href="/tags/%E6%9C%8D%E5%8A%A1%E7%AB%AF/">服务端</a>
+        
+            <a href="/tags/cli%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%A8%8B%E5%BA%8F/">CLI命令行程序</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0.</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E5%88%9D%E8%AF%95%E8%87%AA%E5%BB%BA%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">初试自建内网穿透</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 zx1360
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

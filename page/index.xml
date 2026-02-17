@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on 谁才是超级小马</title>
+        <link>https://zx1360.github.io/page/</link>
+        <description>Recent content in Pages on 谁才是超级小马</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-CN</language>
+        <copyright>zx1360</copyright>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://zx1360.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>归档</title>
+        <link>https://zx1360.github.io/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://zx1360.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>关于</title>
+        <link>https://zx1360.github.io/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://zx1360.github.io/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;p&gt;谁才是, 超级小马.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>链接</title>
+        <link>https://zx1360.github.io/%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://zx1360.github.io/%E9%93%BE%E6%8E%A5/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://zx1360.github.io/%E9%93%BE%E6%8E%A5/assets/OIP-C.webp&#34;
+	width=&#34;436&#34;
+	height=&#34;400&#34;
+	srcset=&#34;https://zx1360.github.io/%E9%93%BE%E6%8E%A5/assets/OIP-C_hu_28b989d352a7f323.webp 480w, https://zx1360.github.io/%E9%93%BE%E6%8E%A5/assets/OIP-C_hu_678879066be813dd.webp 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;OIP-C&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;109&#34;
+		data-flex-basis=&#34;261px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;这么强?&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://zx1360.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://zx1360.github.io/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

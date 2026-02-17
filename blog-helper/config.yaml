@@ -1,0 +1,18 @@
+# 远程仓库中存放Hugo源代码的分支
+source_branch: "main"
+
+# 默认的git提交信息
+default_commit_message: "更新博客内容"
+
+# 新建文章的Markdown模板
+post_template: |
+  +++
+  date = '{{ .Date }}'
+  draft = true
+  title = '{{ .Title }}'
+
+  tags=['博客']
+
+  +++
+
+  [toc]
